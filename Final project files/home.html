@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="index.js"></script>
+  <link rel="stylesheet" href="index.css">
+  </head>
+
+<body style="background-color: black;">
+
+  <div class="container-fluid">
+    <!-- nav bar -->
+
+    <nav class="navbar navbar-expand-lg" style="background-color: transparent;">
+      <div class="container-fluid">
+
+        <a class="navbar-brand" href="#" style="color: white;">
+          <img src="Icons&Images/Logo_white.png">
+          Movie Roomy
+        </a>
+
+        <!-- links -->
+        <ul class="nav justify-content-end">
+
+          <li class="nav-item">
+            <a class="nav-link" href="watchlist.html" style="color: white;">Watchlist</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="movielibrary.html" style="color: white;">Movie Library</a>
+          </li>
+
+          <li class="nav-item" id="signname">
+            <a class="nav-link" href="signuppage.html" style="color: white;">Sign Up</a>
+          </li>
+
+
+        </ul>
+
+      </div>
+
+    </nav>
+  
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <img id="car1img" src="" style="height: 750px; width: 1880px;">
+          <div class="carousel-caption d-none d-lg-block">
+            <h1 style="color:white;"> <span id="car1" style="background-color: rgba(48, 41, 41, 0.573);"></span></h1>
+            <h3 style="color: white;"> <span id="tagline1" style="background-color: rgb(48, 41, 41, 0.573);"></span>
+            </h3>
+            <iframe id="carvid" width="560" height="315" title="YouTube video player" frameborder="0" allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="" id="car2img" style="height: 750px; width: 1880px;">
+          <div class="carousel-caption d-none d-lg-block">
+            <h1 style="color:white;"> <span id="car2" style="background-color: rgba(48, 41, 41, 0.573);"></span></h1>
+            <h3 style="color: white;"> <span id="tagline2" style="background-color: rgb(48, 41, 41, 0.573);"></span>
+            </h3>
+            <iframe id="carvid2" width="560" height="315" title="YouTube video player" frameborder="0" allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="" id="car3img" style="height: 750px; width: 1880px;">
+          <div class="carousel-caption d-none d-lg-block">
+            <h1 style="color:white;"> <span id="car3" style="background-color: rgba(48, 41, 41, 0.573);"></span></h1>
+            <h3 style="color: white;"> <span id="tagline3" style="background-color: rgb(48, 41, 41, 0.573);"></span>
+            </h3>
+            <iframe id="carvid3" width="560" height="315" title="YouTube video player" frameborder="0" allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+  </div>
+
+  <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <svg class="bd-placeholder-img rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+        <rect width="100%" height="100%" fill="#007aff"></rect>
+      </svg>
+
+      <strong class="me-auto">Bootstrap</strong>
+      <small class="text-muted">11 mins ago</small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      Hello, world! This is a toast message.
+    </div>
+  </div>
+
+
+  <div class="col-lg-12" style=" margin-top: 25px;">
+
+    <h2 style="margin-left: 150px; color: white;">Top Rated</h2>
+
+    <div id="toprated1" class="card text-bg-dark col-lg-3 moviecards1">
+      <img id="top1poster" src="" class="card-img">
+      <div id="top1over" class="card-img-overlay text-white d-flex flex-column justify-content-end">
+        <h5 class="card-title" id="toprated1title"></h5>
+        <p class="card-text cardssyn" id="toprated1syn"></p>
+        <a href="individualmovie.html" class="btn btn-primary" onclick="move1()">See more</a>
+      </div>
+
+    </div>
+
+    <div id="toprated2" class="card text-bg-dark col-lg-3 moviecards">
+      <img id="top2poster" src="" class="card-img">
+      <div id="top2over" class="card-img-overlay text-white d-flex flex-column justify-content-end">
+        <h5 class="card-title" id="toprated2title"></h5>
+        <p class="card-text cardssyn" id="toprated2syn"></p>
+        <a href="individualmovie.html" class="btn btn-primary" onclick="move2()">See more</a>
+      </div>
+    </div>
+
+    <div id="toprated3" class="card text-bg-dark col-lg-3 moviecards">
+      <img id="top3poster" src="" class="card-img">
+      <div id="top3over" class="card-img-overlay text-white d-flex flex-column justify-content-end">
+        <h5 class="card-title" id="toprated3title"></h5>
+        <p class="card-text cardssyn" id="toprated3syn"></p>
+        <a href="individualmovie.html" class="btn btn-primary" onclick="move3()">See more</a>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="col-lg-12" style=" margin-top: 800px;">
+
+    <h2 style="margin-left: 150px; color: white;">Recent Releases</h2>
+
+    <div id="recent1" class="card text-bg-dark col-lg-3 moviecards1">
+      <img id="recent1poster" src="" class="card-img">
+      <div id="recent1over" class="card-img-overlay text-white d-flex flex-column justify-content-end">
+        <h5 class="card-title" id="recent1title"></h5>
+        <p class="card-text cardssyn" id="recent1syn"></p>
+        <a href="individualmovie.html" class="btn btn-primary" onclick="move4()">See more</a>
+      </div>
+    </div>
+
+    <div id="recent2" class="card text-bg-dark col-lg-3 moviecards">
+      <img id="recent2poster" src="" class="card-img">
+      <div id="recent2over" class="card-img-overlay text-white d-flex flex-column justify-content-end">
+        <h5 class="card-title" id="recent2title"></h5>
+        <p class="card-text cardssyn" id="recent2syn"></p>
+        <a href="individualmovie.html" class="btn btn-primary" onclick="move5()">See more</a>
+      </div>
+    </div>
+
+    <div id="recent3" class="card text-bg-dark col-lg-3 moviecards">
+      <img id="recent3poster" src="" class="card-img">
+      <div id="recent3over" class="card-img-overlay text-white d-flex flex-column justify-content-end">
+        <h5 class="card-title" id="recent3title"></h5>
+        <p class="card-text cardssyn" id="recent3syn"></p>
+        <a href="individualmovie.html" class="btn btn-primary" onclick="move6()">See more</a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="col-lg-12" style=" margin-top: 800px;">
+
+    <h2 style="margin-left: 150px; color: white;">Coming Soon</h2>
+
+    <div id="soon1" class="card text-bg-dark col-lg-3 moviecards1">
+      <img id="soon1poster" src="" class="card-img">
+      <div id="soon11over" class="card-img-overlay text-white d-flex flex-column justify-content-end">
+        <h5 class="card-title" id="soon1title"></h5>
+        <p class="card-text cardssyn" id="soon1syn"></p>
+        <a href="individualmovie.html" class="btn btn-primary" onclick="move7()">See more</a>
+      </div>
+    </div>
+
+    <div id="soon2" class="card text-bg-dark col-lg-3 moviecards">
+      <img id="soon2poster" src="" class="card-img">
+      <div id="soon2over" class="card-img-overlay text-white d-flex flex-column justify-content-end">
+        <h5 class="card-title" id="soon2title"></h5>
+        <p class="card-text cardssyn" id="soon2syn"></p>
+        <a href="individualmovie.html" class="btn btn-primary" onclick="move8()">See more</a>
+      </div>
+    </div>
+
+    <div id="soon3" class="card text-bg-dark col-lg-3 moviecards">
+      <img id="soon3poster" src="" class="card-img">
+      <div id="soon3over" class="card-img-overlay text-white d-flex flex-column justify-content-end">
+        <h5 class="card-title" id="soon3title"></h5>
+        <p class="card-text cardssyn" id="soon3syn"></p>
+        <a href="individualmovie.html" class="btn btn-primary" onclick="move9()">See more</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="row" style="margin: 0px; margin-top: 60px;" id="footer">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-1"> <a href="index.html"><img id="footerLogo" src="Icons&Images/Logo_white.png"></a> </div>
+    <div class="col-sm-2">
+      <p id="footerText">Movie Roomy, 2022</p>
+    </div>
+    <div class="col-sm-5"></div>
+    <div id="socialIcons" class="col-sm-2">
+      <a href="https://www.instagram.com/reel/ChnEqmdpZX8/?utm_source=ig_web_copy_link"><img id="instagram"
+          src="Icons&Images/instagram_icon.svg"></a>
+      <a href="https://twitter.com/TopGunMovie?s=20&t=In2D8nRXtmn_6Z7E8SdJCQ"><img id="twitter"
+          src="Icons&Images/twitter_icon.svg"></a>
+      <a href="https://fb.watch/g125Uv8hpR/"><img id="facebook" src="Icons&Images/facebook_icon.svg"></a>
+    </div>
+  </div>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>

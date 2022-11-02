@@ -1,0 +1,28 @@
+{
+    "users": [ 
+        {
+            "username": "Wayne Rooney",
+            "password": "<<L5EVys4LFe[9}C", 
+            "account": "active"
+        },
+        {
+            "username": "Diego Costa",
+            "password": "YB66>>s_?jwG$L", 
+            "account": "active"
+        },
+        {
+            "username": "Phillip Cocu",
+            "password": "password", 
+            "account": "suspended"
+        },
+        {
+            "username": "Michael Chandler",
+            "password": ">jUDQADv7{U$veHS", 
+            "account": "active"
+        },
+        {
+            "username": "Lewis Ocampos",
+            "password": "Uc^X;Q<}rm.6Q6qG", 
+            "account": "active"
+        }]
+    }
