@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Roomy - Library</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body style="background-color: black;" onload="loadlib()">
+    <!-- navbar -->
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg" style="background-color: transparent;">
+            <div class="container-fluid">
+
+                <a class="navbar-brand" href="home.html" style="color: white;">
+                    <img src="Icons&Images/Logo_white.png">
+                    Movie Roomy
+                </a>
+
+                <!-- links -->
+                <ul class="nav justify-content-end">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="color: white;">Watchlist</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="color: white;">Movie Library</a>
+                    </li>
+
+                    <li class="nav-item" id="signname">
+                        <a class="nav-link" href="index.html" style="color: white;">Sign Out</a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- movie library page -->
+    <div id="grad">
+
+
+        <div class="row" style=" margin: 0px;">
+            <div id="filters" class="col-sm-2">
+                <div class="filter1" style="margin-left: 20px; padding-bottom: 10px;">All Movies</div>
+                <div class="filter2" style="margin-left: 20px; padding-bottom: 5px;">Lists</div>
+                <div class="lists" style="margin-left: 50px;">
+                    <div class="genre1" style="padding: 5px;"><button id="upcomingfilter" class="btn btn-primary" onclick="toprated()">Top Rated</button></div>
+                    <div class="genre2" style="padding: 5px;"><button id="upcomingfilter" class="btn btn-primary" onclick="newest()">Newest</button></div>
+                    <div class="genre1" style="padding: 5px;"><button id="upcomingfilter" class="btn btn-primary" onclick="upcoming()">Upcoming</button></div>
+                </div>
+
+                <div class="filter2" style="margin-left: 20px; padding-bottom: 5px;">Genres</div>
+                <div class="genres" style="margin-left: 50px;">
+                    <div class="genre1" style="padding: 5px;"><button id="actionfilter" class="btn btn-primary" onclick="actionfilter()">Action</button></div>
+                    <div class="genre2" style="padding: 5px;">Animation</div>
+                    <div class="genre3" style="padding: 5px;">Adventure</div>
+                    <div class="genre4" style="padding: 5px;">Comedy</div>
+                    <div class="genre5" style="padding: 5px;">Crime</div>
+                    <div class="genre6" style="padding: 5px;">Drama</div>
+                    <div class="genre7" style="padding: 5px;">Romance</div>
+                </div>
+                <div class="filter3"style="margin-left: 20px; padding-top: 10px; padding-bottom: 10px;">Years</div>
+                <div class="years" style="margin-left: 50px;">
+                    <div class="year1" style="padding: 5px;">Before 2000</div>
+                    <div class="year2" style="padding: 5px;">2000-2009</div>
+                    <div class="year3" style="padding: 5px;">2010-2019</div>
+                    <div class="year4" style="padding: 5px;">2020-2022</div>
+                </div>
+                <div class="filter4" style="margin-left: 20px; padding-top: 10px; padding-bottom: 10px;">IMDb Score</div>
+                <div class="imdbscore" style="margin-left: 50px;">
+                    <div class="r1" style="padding: 5px;">1/10</div>
+                    <div class="r2" style="padding: 5px;">2/10</div>
+                    <div class="r3" style="padding: 5px;">3/10</div>
+                    <div class="r4" style="padding: 5px;">4/10</div>
+                    <div class="r5" style="padding: 5px;">5/10</div>
+                    <div class="r6" style="padding: 5px;">6/10</div>
+                    <div class="r7" style="padding: 5px;">7/10</div>
+                    <div class="r8" style="padding: 5px;">8/10</div>
+                    <div class="r9" style="padding: 5px;">9/10</div>
+                    <div class="r10"style="padding: 5px;">10/10</div>
+                </div>
+            </div>
+
+            <div class="col-sm-10">
+            
+
+                <div  id="movie1" class="card text-bg-dark col-lg-3" style="float:left; margin-right: 40px; margin-left: 40px; margin-bottom: 50px; margin-top: 20px;">
+                    <div id="movie1poster"><img src="" class="card-img"></div>
+
+                    <div id="movie1over" class="card-img-overlay text-white d-flex flex-column justify-content-end">
+                        <h5 class="card-title" id="movie1title"></h5>
+                        <p class="card-text" id="movie1syn"></p>
+                        <a href="individualmovie.html" class="btn btn-primary" onclick="movie1()">View Details</a>
+                    </div>
+
+                </div>
+
+                <div id="movie2" class="card text-bg-dark col-lg-3" style="float:left;  margin-right: 40px; margin-left: 40px; margin-bottom: 50px; margin-top: 20px;">
+                    <div id="movie2poster"><img src="" class="card-img"></div>
+
+                    <div id="movie2over" class="card-img-overlay text-white d-flex flex-column justify-content-end">
+                        <h5 class="card-title" id="movie2title"></h5>
+                        <p class="card-text" id="movie2syn"></p>
+                        <a href="individualmovie.html" class="btn btn-primary" onclick="movie2()">View Details</a>
+                    </div>
+
+                </div>
+
+                <div id="movie3" class="card text-bg-dark col-lg-3" style="float:left;  margin-right: 40px; margin-left: 40px; margin-bottom: 50px; margin-top: 20px;">
+                    <div id="movie3poster"><img src="" class="card-img"></div>
+
+                    <div id="movie3over" class="card-img-overlay text-white d-flex flex-column justify-content-end">
+                        <h5 class="card-title" id="movie3title"></h5>
+                        <p class="card-text" id="movie3syn"></p>
+                        <a href="individualmovie.html" class="btn btn-primary" onclick="movie3()">View Details</a>
+                    </div>
+
+                </div>
+
+                <div id="movie4" class="card text-bg-dark col-lg-3" style="float:left; margin-right: 40px; margin-left: 40px; margin-bottom: 50px;">
+                    <div id="movie4poster"><img src="" class="card-img"></div>
+
+                    <div id="movie4over" class="card-img-overlay text-white d-flex flex-column justify-content-end">
+                        <h5 class="card-title" id="movie4title"></h5>
+                        <p class="card-text" id="movie4syn"></p>
+                        <a href="individualmovie.html" class="btn btn-primary" onclick="movie4()">View Details</a>
+                    </div>
+
+                </div>
+
+                <div id="movie5" class="card text-bg-dark col-lg-3" style="float:left;  margin-right: 40px; margin-left: 40px; margin-bottom: 50px;">
+                    <div id="movie5poster"><img src="" class="card-img"></div>
+
+                    <div id="movie5over" class="card-img-overlay text-white d-flex flex-column justify-content-end">
+                        <h5 class="card-title" id="movie5title"></h5>
+                        <p class="card-text" id="movie5syn"></p>
+                        <a href="individualmovie.html" class="btn btn-primary" onclick="movie5()">View Details</a>
+                    </div>
+
+                </div>
+
+                <div id="movie6" class="card text-bg-dark col-lg-3" style="float:left;  margin-right: 40px; margin-left: 40px; margin-bottom: 50px;">
+                    <div id="movie6poster"><img src="" class="card-img"></div>
+
+                    <div id="movie6over" class="card-img-overlay text-white d-flex flex-column justify-content-end">
+                        <h5 class="card-title" id="movie6title"></h5>
+                        <p class="card-text" id="movie6syn"></p>
+                        <a href="individualmovie.html" class="btn btn-primary" onclick="movie6()">View Details</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+           
+
+        
+
+            <div class="col-sm-1"></div>
+        </div>
+
+      
+
+        <div class="row" style=" margin: 0px; margin-bottom: 50px;">
+            <div class="col-sm-2"></div>
+
+            <div class="col-sm-10">
+            
+
+                <div id="movie7" class="card text-bg-dark col-lg-3" style="float:left; margin-right: 40px; margin-left: 40px;">
+                    <div id="movie7poster"><img src="" class="card-img"></div>
+
+                    <div id="movie7over" class="card-img-overlay text-white d-flex flex-column justify-content-end">
+                        <h5 class="card-title" id="movie7title"></h5>
+                        <p class="card-text" id="movie7syn"></p>
+                        <a href="individualmovie.html" class="btn btn-primary" onclick="movie7()">View Details</a>
+                    </div>
+
+                </div>
+
+                <div id="movie8" class="card text-bg-dark col-lg-3" style="float:left;  margin-right: 40px; margin-left: 40px;">
+                    <div id="movie8poster"><img src="" class="card-img"></div>
+
+                    <div id="movie8over" class="card-img-overlay text-white d-flex flex-column justify-content-end">
+                        <h5 class="card-title" id="movie8title"></h5>
+                        <p class="card-text" id="movie8syn"></p>
+                        <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                        <a href="individualmovie.html" class="btn btn-primary" onclick="movie8()">View Details</a>
+                    </div>
+
+                </div>
+
+                <div id="movie9" class="card text-bg-dark col-lg-3" style="float:left;  margin-right: 40px; margin-left: 40px;">
+                    <div id="movie9poster"><img src="" class="card-img"></div>
+
+                    <div id="movie9over" class="card-img-overlay text-white d-flex flex-column justify-content-end">
+                        <h5 class="card-title" id="movie9title"></h5>
+                        <p class="card-text" id="movie9syn"></p>
+                        <a href="individualmovie.html" class="btn btn-primary" onclick="movie9()">View Details</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="col-sm-1"></div>
+        </div>
+
+
+        <div class="row" style=" margin: 0px; margin-bottom: 50px;">
+            <div class="col-sm-2"></div>
+
+            <div class="col-sm-10">
+            
+
+                <div id="movie10" class="card text-bg-dark col-lg-3" style="float:left; margin-right: 40px; margin-left: 40px;">
+                    <div id="movie10poster"><img src="" class="card-img"></div>
+
+                    <div id="movie10over" class="card-img-overlay text-white d-flex flex-column justify-content-end">
+                        <h5 class="card-title" id="movie10title"></h5>
+                        <p class="card-text" id="movie10syn"></p>
+                        <a href="individualmovie.html" class="btn btn-primary" onclick="movie10()">View Details</a>
+                    </div>
+
+                </div>
+
+                <div id="movie11" class="card text-bg-dark col-lg-3" style="float:left;  margin-right: 40px; margin-left: 40px;">
+                    <div id="movie11poster"><img src="" class="card-img"></div>
+
+                    <div id="movie11over" class="card-img-overlay text-white d-flex flex-column justify-content-end">
+                        <h5 class="card-title" id="movie11title"></h5>
+                        <p class="card-text" id="movie11syn"></p>
+                        <a href="individualmovie.html" class="btn btn-primary" onclick="movie11()">View Details</a>
+                    </div>
+
+                </div>
+
+                <div id="movie12" class="card text-bg-dark col-lg-3" style="float:left;  margin-right: 40px; margin-left: 40px;">
+                    <div id="movie12poster"><img src="" class="card-img"></div>
+
+                    <div id="movie12over" class="card-img-overlay text-white d-flex flex-column justify-content-end">
+                        <h5 class="card-title" id="movie12title"></h5>
+                        <p class="card-text" id="movie12syn"></p>
+                        <a href="individualmovie.html" class="btn btn-primary" onclick="movie12()">View Details</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="col-sm-1"></div>
+        </div>
+
+
+        <div class="row" style=" margin: 0px; margin-bottom: 50px;">
+            <div class="col-sm-2"></div>
+
+            <div class="col-sm-10">
+            
+
+                <div id="movie13" class="card text-bg-dark col-lg-3" style="float:left; margin-right: 40px; margin-left: 40px;">
+                    <div id="movie13poster"><img src="" class="card-img"></div>
+
+                    <div id="movie13over" class="card-img-overlay text-white d-flex flex-column justify-content-end">
+                        <h5 class="card-title" id="movie13title"></h5>
+                        <p class="card-text" id="movie13syn"></p>
+                        <a href="individualmovie.html" class="btn btn-primary" onclick="movie13()">View Details</a>
+                    </div>
+
+                </div>
+
+                <div id="movie14" class="card text-bg-dark col-lg-3" style="float:left;  margin-right: 40px; margin-left: 40px;">
+                    <div id="movie14poster"><img src="" class="card-img"></div>
+
+                    <div id="movie14over" class="card-img-overlay text-white d-flex flex-column justify-content-end">
+                        <h5 class="card-title" id="movie14title"></h5>
+                        <p class="card-text" id="movie14syn"></p>
+                        <a href="individualmovie.html" class="btn btn-primary" onclick="movie14()">View Details</a>
+                    </div>
+
+                </div>
+
+                <div id="movie15" class="card text-bg-dark col-lg-3" style="float:left;  margin-right: 40px; margin-left: 40px;">
+                    <div id="movie15poster"><img src="" class="card-img"></div>
+
+                    <div id="movie15over" class="card-img-overlay text-white d-flex flex-column justify-content-end">
+                        <h5 class="card-title" id="movie15title"></h5>
+                        <p class="card-text" id="movie15syn"></p>
+                        <a href="individualmovie.html" class="btn btn-primary" onclick="movie15()">View Details</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="col-sm-1"></div>
+        </div>
+
+
+        <div class="row" style=" margin: 0px; margin-bottom: 50px;">
+            <div class="col-sm-2"></div>
+
+            <div class="col-sm-10">
+            
+
+                <div id="movie16" class="card text-bg-dark col-lg-3" style="float:left; margin-right: 40px; margin-left: 40px;">
+                    <div id="movie16poster"><img src="" class="card-img"></div>
+
+                    <div id="movie16over" class="card-img-overlay text-white d-flex flex-column justify-content-end">
+                        <h5 class="card-title" id="movie16title"></h5>
+                        <p class="card-text" id="movie16syn"></p>
+                        <a href="individualmovie.html" class="btn btn-primary" onclick="movie16()">View Details</a>
+                    </div>
+
+                </div>
+
+                <div id="movie17" class="card text-bg-dark col-lg-3" style="float:left;  margin-right: 40px; margin-left: 40px;">
+                    <div id="movie17poster"><img src="" class="card-img"></div>
+
+                    <div id="movie17over" class="card-img-overlay text-white d-flex flex-column justify-content-end">
+                        <h5 class="card-title" id="movie17title"></h5>
+                        <p class="card-text" id="movie17syn"></p>
+                        <a href="individualmovie.html" class="btn btn-primary" onclick="movie17()">View Details</a>
+                    </div>
+
+                </div>
+
+                <div id="movie18" class="card text-bg-dark col-lg-3" style="float:left;  margin-right: 40px; margin-left: 40px;">
+                    <div id="movie18poster"><img src="" class="card-img"></div>
+
+                    <div id="movie18over" class="card-img-overlay text-white d-flex flex-column justify-content-end">
+                        <h5 class="card-title" id="movie18title"></h5>
+                        <p class="card-text" id="movie18syn"></p>
+                        <a href="individualmovie.html" class="btn btn-primary" onclick="movie18()">View Details</a>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+
+        <div class="row" style=" margin: 0px; margin-bottom: 50px;">
+            <div class="col-sm-2"></div>
+
+            <div class="col-sm-10">
+            
+
+                <div id="movie19" class="card text-bg-dark col-lg-3" style="float:left; margin-right: 40px; margin-left: 40px;">
+                    <div id="movie19poster"><img src="" class="card-img"></div>
+
+                    <div id="movie19over" class="card-img-overlay text-white d-flex flex-column justify-content-end">
+                        <h5 class="card-title" id="movie19title"></h5>
+                        <p class="card-text" id="movie19syn"></p>
+                        <a href="individualmovie.html" class="btn btn-primary" onclick="movie19()">View Details</a>
+                    </div>
+
+                </div>
+
+                <div id="movie20" class="card text-bg-dark col-lg-3" style="float:left;  margin-right: 40px; margin-left: 40px;">
+                    <div id="movie20poster"><img src="" class="card-img"></div>
+
+                    <div id="movie20over" class="card-img-overlay text-white d-flex flex-column justify-content-end">
+                        <h5 class="card-title" id="movie20title"></h5>
+                        <p class="card-text" id="movie20syn"></p>
+                        <a href="individualmovie.html" class="btn btn-primary" onclick="movie20()">View Details</a>
+                    </div>
+
+                </div>
+
+                <div id="movie21" class="card text-bg-dark col-lg-3" style="float:left;  margin-right: 40px; margin-left: 40px;">
+                    <div id="movie21poster"><img src="" class="card-img"></div>
+
+                    <div id="movie21over" class="card-img-overlay text-white d-flex flex-column justify-content-end">
+                        <h5 class="card-title" id="movie21title"></h5>
+                        <p class="card-text" id="movie21syn"></p>
+                        <a href="individualmovie.html" class="btn btn-primary" onclick="movie21()">View Details</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="col-sm-1"></div>
+        </div>
+
+
+        <div class="row" style=" margin: 0px; margin-bottom: 50px;">
+            <div class="col-sm-2"></div>
+
+            <div class="col-sm-10">
+            
+
+                <div id="movie22" class="card text-bg-dark col-lg-3" style="float:left; margin-right: 40px; margin-left: 40px;">
+                    <div id="movie22poster"><img src="" class="card-img"></div>
+
+                    <div id="movie22over" class="card-img-overlay text-white d-flex flex-column justify-content-end">
+                        <h5 class="card-title" id="movie22title"></h5>
+                        <p class="card-text" id="movie22syn"></p>
+                        <a href="individualmovie.html" class="btn btn-primary" onclick="movie22()">View Details</a>
+                    </div>
+
+                </div>
+
+                <div id="movie23" class="card text-bg-dark col-lg-3" style="float:left;  margin-right: 40px; margin-left: 40px;">
+                    <div id="movie23poster"><img src="" class="card-img"></div>
+
+                    <div id="movie23over" class="card-img-overlay text-white d-flex flex-column justify-content-end">
+                        <h5 class="card-title" id="movie23title"></h5>
+                        <p class="card-text" id="movie23syn"></p>
+                        <a href="individualmovie.html" class="btn btn-primary" onclick="movie23()">View Details</a>
+                    </div>
+
+                </div>
+
+                <div id="movie24" class="card text-bg-dark col-lg-3" style="float:left;  margin-right: 40px; margin-left: 40px;">
+                    <div id="movie24poster"><img src="" class="card-img"></div>
+
+                    <div id="movie24over" class="card-img-overlay text-white d-flex flex-column justify-content-end">
+                        <h5 class="card-title" id="movie24title"></h5>
+                        <p class="card-text" id="movie24syn"></p>
+                        <a href="individualmovie.html" class="btn btn-primary" onclick="movie24()">View Details</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="col-sm-1" ></div>
+        </div>
+
+
+        <div class="row" style=" margin: 0px; ">
+            <div class="col-sm-2"></div>
+
+            <div class="col-sm-10">
+            
+
+                <div id="movie25" class="card text-bg-dark col-lg-3" style="float:left; margin-right: 40px; margin-left: 40px;">
+                    <div id="movie25poster"><img src="" class="card-img"></div>
+
+                    <div id="movie25over" class="card-img-overlay text-white d-flex flex-column justify-content-end">
+                        <h5 class="card-title" id="movie25title"></h5>
+                        <p class="card-text" id="movie25syn"></p>
+                        <a href="individualmovie.html" class="btn btn-primary" onclick="movie25()">View Details</a>
+                    </div>
+
+                </div>
+
+                <div id="movie26" class="card text-bg-dark col-lg-3" style="float:left; margin-right: 40px; margin-left: 40px;">
+                    <div id="movie26poster"><img src="" class="card-img"></div>
+
+                    <div id="movie26over" class="card-img-overlay text-white d-flex flex-column justify-content-end">
+                        <h5 class="card-title" id="movie26title"></h5>
+                        <p class="card-text" id="movie26syn"></p>
+                        <a href="individualmovie.html" class="btn btn-primary" onclick="movie26()">View Details</a>
+                    </div>
+
+                </div>
+
+                <div id="movie27" class="card text-bg-dark col-lg-3" style="float:left; margin-right: 40px; margin-left: 40px;">
+                    <div id="movie27poster"><img src="" class="card-img"></div>
+
+                    <div id="movie27over" class="card-img-overlay text-white d-flex flex-column justify-content-end">
+                        <h5 class="card-title" id="movie27title"></h5>
+                        <p class="card-text" id="movie27syn"></p>
+                        <a href="individualmovie.html" class="btn btn-primary" onclick="movie27()">View Details</a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+
+        <!-- footer -->
+
+        <div  style="padding-top: 50px;" id="footer">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-1"><img id="footerLogo" src="Icons&Images/Logo_white.png" style="display: inline; float: left; margin-left: 120px;"></div>
+            <div class="col-sm-2" style="display: inline; ">
+                <p id="footerText" >Movie Roomy, 2022</p>
+            </div>
+            <div class="col-sm-5"></div>
+            <div id="socialIcons" style="float: right; margin-right: 120px;" class="col-sm-2">
+                <a href="https://www.instagram.com/reel/ChnEqmdpZX8/?utm_source=ig_web_copy_link"><img id="instagram"
+                        src="Icons&Images/instagram_icon.svg"></a>
+                <a href="https://twitter.com/TopGunMovie?s=20&t=In2D8nRXtmn_6Z7E8SdJCQ"><img id="twitter"
+                        src="Icons&Images/twitter_icon.svg"></a>
+                <a href="https://fb.watch/g125Uv8hpR/"><img id="facebook" src="Icons&Images/facebook_icon.svg"></a>
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+    </div>
+    
+</body>
+
+</html>

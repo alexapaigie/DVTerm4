@@ -1,0 +1,586 @@
+body {
+    background-color: black;
+}
+
+
+/* individual movie page */
+
+
+#individual_poster {
+    width: 300px;
+}
+
+#individual_trailer {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+#individual_movietitle {
+    font-size: 50px;
+    margin-top: -10px;
+    padding-bottom: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+#individual_synopsis {
+    font-size: 18px;
+    padding-bottom: 40px;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+#individual_dirheading {
+    font-size: 22px;
+    padding-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+#individual_dircontent {
+    font-size: 18px;
+    padding-bottom: 40px;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+#individual_actheading {
+    font-size: 22px;
+    padding-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+#individual_actcontent {
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+#individual_rating {
+    font-size: 22px;
+    padding-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold
+}
+
+
+/* movie library page */
+
+#grad {
+    height: 100%;
+    background-image: linear-gradient(to right, rgb(134, 134, 134), black, black, black, black);
+}
+
+
+/* footer */
+
+#footer {
+    height: 100px;
+    margin-top: 40px;
+}
+
+
+#socialIcons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#instagram,
+#twitter,
+#facebook {
+    filter: invert(100%);
+    height: 40px;
+    margin-left: 25px;
+}
+
+#footerText {
+    float: left;
+    color: white;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#footerLogo {
+    cursor: pointer;
+}
+
+
+/* navbar  */
+
+#watchlist {
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: white;
+}
+
+#library {
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: white;
+}
+
+#signup {
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: white;
+}
+
+
+/* who's watching page */
+
+#gradient {
+    background-image: linear-gradient(to bottom right, black, #1B2D3C, black, #1B2D3C, black);
+}
+
+
+
+
+
+
+#watchbody {
+    background-color: black;
+    color: white;
+}
+
+.container {
+    background-color: black;
+}
+
+.section {
+    background-color: black;
+}
+
+.mobile-font {
+    color: white;
+}
+
+.ml-auto {
+    color: white;
+}
+
+
+@media(max-width:991px) {
+    #heading {
+        padding-left: 50px;
+        background-color: black;
+
+    }
+
+    #prc {
+        margin-left: 70px;
+        padding-left: 110px;
+        background-color: black;
+
+    }
+
+    #quantity {
+        padding-left: 48px;
+        background-color: black;
+
+    }
+
+    #produc {
+        padding-left: 40px;
+        background-color: black;
+
+    }
+
+    #total {
+        padding-left: 54px;
+        background-color: black;
+
+    }
+}
+
+@media(max-width:767px) {
+    .mobile {
+        font-size: 10px;
+        background-color: black;
+
+    }
+
+    h5 {
+        font-size: 14px;
+        background-color: black;
+
+    }
+
+    h6 {
+        font-size: 9px;
+        background-color: black;
+
+    }
+
+    #mobile-font {
+        font-size: 11px;
+        background-color: black;
+
+    }
+
+    #prc {
+        font-weight: 700;
+        margin-left: -45px;
+        padding-left: 105px;
+        background-color: black;
+
+    }
+
+    #quantity {
+        font-weight: 700;
+        padding-left: 6px;
+        background-color: black;
+
+    }
+
+    #produc {
+        font-weight: 700;
+        padding-left: 0px;
+        background-color: black;
+
+    }
+
+    #total {
+        font-weight: 700;
+        padding-left: 9px;
+        background-color: black;
+
+    }
+
+    #image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .col {
+        width: 100%;
+        background-color: black;
+
+    }
+
+    #zero-pad {
+        padding: 2%;
+        margin-left: 10px;
+        background-color: black;
+    }
+
+    #footer-font {
+        font-size: 24px;
+        background-color: black;
+
+    }
+
+    #heading {
+        padding-top: 15px;
+        background-color: black;
+
+    }
+}
+
+/* buttons */
+
+
+
+.btn,
+.btn-primary {
+    background-color: #309BDE;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Filters */
+
+.filter1,
+.filter2,
+.filter3,
+.filter4 {
+    font-size: 14pt;
+    font-family: 'Roboto', sans-serif;
+}
+
+.filter1 {
+    color: #309BDE;
+}
+
+.genres,
+.years,
+.imdbscore {
+    font-size: 12pt;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+/* CARDS SYN */
+
+#movie1syn,
+#movie2syn,
+#movie3syn,
+#movie4syn,
+#movie5syn,
+#movie6syn,
+#movie7syn,
+#movie8syn,
+#movie9syn,
+#movie10syn,
+#movie11syn,
+#movie12syn,
+#movie13syn,
+#movie14syn,
+#movie15syn,
+#movie16syn,
+#movie17syn,
+#movie18syn,
+#movie19syn,
+#movie20syn,
+#movie21syn,
+#movie22syn,
+#movie23syn,
+#movie24syn,
+#movie25syn {
+    font-size: 10pt;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* CARDS TITLE */
+
+#movie1title,
+#movie2title,
+#movie3title,
+#movie4title,
+#movie5title,
+#movie6title,
+#movie7title,
+#movie8title,
+#movie9title,
+#movie10title,
+#movie11title,
+#movie12title,
+#movie13title,
+#movie14title,
+#movie15title,
+#movie16title,
+#movie17title,
+#movie18title,
+#movie19title,
+#movie20title,
+#movie21title,
+#movie22title,
+#movie23title,
+#movie24title,
+#movie25title {
+    font-size: 18pt;
+    font-family: 'Roboto', sans-serif;
+}
+
+.card-text {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+
+/* NEW SIGN IN / SIGN UP */
+
+form {
+    width: 30%;
+    height: 250px;
+    margin: 0 auto;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    margin-top: 100px;
+    padding-top: 10px;
+    margin-bottom: 20px;
+}
+
+.message {
+    width: 100%;
+    padding-top: 15px;
+    height: 31px;
+    font-size: 14px;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+    color: black;
+    width: 30%;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+input {
+    width: 88%;
+    margin-left: 5%;
+    height: 30px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 10px;
+    padding-left: 2%;
+}
+
+.bttn {
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #2b2b2b;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 25px;
+    padding-top: 10px;
+}
+
+form {
+    width: 30%;
+    height: 250px;
+    margin: 0 auto;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    margin-top: 100px;
+    padding-top: 10px;
+    margin-bottom: 20px;
+}
+
+.message {
+    width: 100%;
+    padding-top: 15px;
+    height: 31px;
+    font-size: 14px;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+    color: black;
+    width: 30%;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+input {
+    width: 88%;
+    margin-left: 5%;
+    height: 30px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 10px;
+    padding-left: 2%;
+}
+
+.bttn {
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #2b2b2b;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 25px;
+    padding-top: 10px;
+}
+
+
+
+
+/* fonts css */
+
+fonts {
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#header {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#card1 {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#cardssyn {
+    background-color: rgba(0, 0, 0, 0.63);
+}
+
+.moviecards1 {
+    float: left;
+    margin-left: 150px;
+    margin-right: 10px;
+}
+
+.moviecards {
+    float: left;
+    margin-right: 10px;
+}
+
+
+body {
+    font-family: sans-serif;
+}
+
+form {
+    width: 30%;
+    height: 250px;
+    margin: 0 auto;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    margin-top: 100px;
+    padding-top: 10px;
+    margin-bottom: 20px;
+}
+
+.message {
+    width: 100%;
+    padding-top: 15px;
+    height: 31px;
+    font-size: 14px;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+    color: black;
+    width: 30%;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+input {
+    width: 88%;
+    margin-left: 5%;
+    height: 30px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 10px;
+    padding-left: 2%;
+}
+
+.bttn {
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #2b2b2b;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 25px;
+    padding-top: 10px;
+}
